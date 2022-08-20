@@ -2,18 +2,27 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "nodemon --config nodemon.json server/src/app.ts"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
+    "config": "^3.3.7",
+    "dayjs": "^1.11.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
     "next": "12.2.5",
+    "passport": "^0.6.0",
+    "pino-pretty": "^9.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.54.5",
+    "socket.io": "^4.5.1",
     "socket.io-client": "^4.5.1"
   },
   "devDependencies": {
@@ -21,6 +30,10 @@
     "@types/react": "^18.0.17",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "@types/config": "^3.3.0",
+    "@types/express": "^4.17.13",
+    "@types/pino": "^7.0.5",
+    "ts-node": "^10.9.1"
   }
 }
