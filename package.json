@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "server": "nodemon --config nodemon.json server/src/app.ts"
+    "server": "nodemon --config nodemon.json pages/_app.tsx"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
