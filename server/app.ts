@@ -1,11 +1,12 @@
 import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
-import config from "config";
+import config from "./config/default";
+import logger from "./utils/logger";
 
-const port = config.get<number>("port");
-const host = config.get<string>("host");
-const corsOrigin = config.get<string>("corsOrigin");
+const port = config.port;
+const host = config.host;
+const corsOrigin = config.corsOrigin;
 
 const app = express();
 const httpServer = createServer(app);
@@ -21,5 +22,5 @@ app.get("/", (_, res) =>
 );
 
 httpServer.listen(port, host, () => {
-    console.log("Yexs");
+  logger.info("Hi");
 });

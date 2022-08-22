@@ -1,5 +1,1 @@
-export default {
-  corsOrigin: "http://localhost:3000",
-  port: 4000,
-  host: "localhost",
-};
+export const  SOCKET_URL = process.env.SOCKET_URL || "http://localhost:4000";
