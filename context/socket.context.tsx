@@ -8,9 +8,7 @@ const SocketContext = createContext({socket});
 
 function SocketsProvider(props: any) {
     return (<SocketContext.Provider
-    value={{socket}}>
-    {...props}
-    </SocketContext.Provider>)
+    value={{socket}}{...props} ></SocketContext.Provider>)
 }
 
 export const useSockets = () => useContext(SocketContext);
